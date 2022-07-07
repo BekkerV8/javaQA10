@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class RadioTest {
     @Test
-    public void shouldStationNine() {
+    public void shouldTurningStationOnNine() {
         Radio station = new Radio();
         station.setCurrentStation(9);
 
@@ -16,7 +16,7 @@ class RadioTest {
     }
 
     @Test
-    public void shouldStationZero() {
+    public void shouldTurningStationOnZero() {
         Radio station = new Radio();
         station.setCurrentStation(0);
 
@@ -26,7 +26,7 @@ class RadioTest {
     }
 
     @Test
-    public void shouldStationTen() {
+    public void shouldTurningStationOn10() {
         Radio station = new Radio();
         station.setCurrentStation(10);
 
@@ -36,7 +36,7 @@ class RadioTest {
     }
 
     @Test
-    public void shouldStationFive() {
+    public void shouldTurningStationOnFive() {
         Radio station = new Radio();
         station.setCurrentStation(5);
 
@@ -47,7 +47,7 @@ class RadioTest {
 
 
     @Test
-    public void shouldStationMinusOne() {
+    public void shouldTurningStationOnMinusOne() {
         Radio station = new Radio();
         station.setCurrentStation(-1);
 
@@ -57,10 +57,10 @@ class RadioTest {
     }
 
     @Test
-    public void shouldStationNext() {
+    public void shouldTurningStationOnNext() {
         Radio station = new Radio();
         station.setCurrentStation(5);
-        station.upStation();
+        station.increaseStation();
 
         int expected = 6;
         int actual = station.getCurrentStation();
@@ -69,10 +69,10 @@ class RadioTest {
 
 
     @Test
-    public void shouldStationPrev() {
+    public void shouldTurningStationOnPrev() {
         Radio station = new Radio();
         station.setCurrentStation(5);
-        station.downStation();
+        station.decreaseStation();
 
         int expected = 4;
         int actual = station.getCurrentStation();
@@ -81,10 +81,10 @@ class RadioTest {
 
 
     @Test
-    public void shouldStationFromZero() {
+    public void shouldTurningStationFromZeroByPrev() {
         Radio station = new Radio();
         station.setCurrentStation(0);
-        station.downStation();
+        station.decreaseStation();
 
         int expected = 9;
         int actual = station.getCurrentStation();
@@ -92,10 +92,10 @@ class RadioTest {
     }
 
     @Test
-    public void shouldStationOnTenNext() {
+    public void shouldTurningStationOnTenByNext() {
         Radio station = new Radio();
         station.setCurrentStation(9);
-        station.upStation();
+        station.increaseStation();
 
         int expected = 0;
         int actual = station.getCurrentStation();
@@ -103,7 +103,7 @@ class RadioTest {
     }
 
     @Test
-    public void shouldVolumeTen() {
+    public void shouldTurningVolumeOnTen() {
         Radio station = new Radio();
         station.setCurrentVolume(10);
 
@@ -113,7 +113,7 @@ class RadioTest {
     }
 
     @Test
-    public void shouldVolumeZero() {
+    public void shouldTurningVolumeZero() {
         Radio station = new Radio();
         station.setCurrentVolume(0);
 
@@ -123,7 +123,7 @@ class RadioTest {
     }
 
     @Test
-    public void shouldVolumeNine() {
+    public void shouldTurningVolumeOnNine() {
         Radio station = new Radio();
         station.setCurrentVolume(5);
 
@@ -133,7 +133,7 @@ class RadioTest {
     }
 
     @Test
-    public void shouldVolumeOne() {
+    public void shouldTurningVolumeOnOne() {
         Radio station = new Radio();
         station.setCurrentVolume(1);
 
@@ -143,7 +143,7 @@ class RadioTest {
     }
 
     @Test
-    public void shouldVolumeEleven() {
+    public void shouldTurningVolumeOnEleven() {
         Radio station = new Radio();
         station.setCurrentVolume(11);
 
@@ -154,10 +154,10 @@ class RadioTest {
 
 
     @Test
-    public void shouldVolumeTenNext() {
+    public void shouldTurningVolumeOnTenByNext() {
         Radio station = new Radio();
         station.setCurrentVolume(9);
-        station.upVolume();
+        station.increaseVolume();
 
         int expected = 10;
         int actual = station.getCurrentVolume();
@@ -165,10 +165,10 @@ class RadioTest {
     }
 
     @Test
-    public void shouldVolumeElevenNext() {
+    public void shouldTurningVolumeOnElevenByNext() {
         Radio station = new Radio();
         station.setCurrentVolume(10);
-        station.upVolume();
+        station.increaseVolume();
 
         int expected = 10;
         int actual = station.getCurrentVolume();
@@ -176,10 +176,10 @@ class RadioTest {
     }
 
     @Test
-    public void shouldVolumeOneNext() {
+    public void shouldTurningVolumeOnOneByNext() {
         Radio station = new Radio();
         station.setCurrentVolume(0);
-        station.upVolume();
+        station.increaseVolume();
 
         int expected = 1;
         int actual = station.getCurrentVolume();
@@ -187,10 +187,10 @@ class RadioTest {
     }
 
     @Test
-    public void shouldVolumeNinePrev() {
+    public void shouldTurningVolumeOnNineByPrev() {
         Radio station = new Radio();
         station.setCurrentVolume(10);
-        station.downVolume();
+        station.decreaseVolume();
 
         int expected = 9;
         int actual = station.getCurrentVolume();
@@ -199,10 +199,10 @@ class RadioTest {
 
 
     @Test
-    public void shouldVolumeZeroPrev() {
+    public void shouldTurningVolumeZeroByPrev() {
         Radio station = new Radio();
         station.setCurrentVolume(0);
-        station.downVolume();
+        station.decreaseVolume();
 
         int expected = 0;
         int actual = station.getCurrentVolume();
@@ -210,7 +210,7 @@ class RadioTest {
     }
 
     @Test
-    public void shouldVolumeMinus() {
+    public void shouldTurningVolumeOnMinusOne() {
         Radio station = new Radio();
         station.setCurrentVolume(-1);
 
